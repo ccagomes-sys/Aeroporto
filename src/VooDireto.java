@@ -1,17 +1,12 @@
 
 public class VooDireto extends Voo {
 
-    public VooDireto(String numeroVoo, String destino,
-                     String horaPartida, String portaEmbarque,
-                     double precoBase, Companhia companhia,
+    public VooDireto(String codVoo, String dest,
+                     String horaP, String porta,
+                     double preco, Companhia companhia,
                      Aviao aviao) {
-        super(numeroVoo, destino, horaPartida, portaEmbarque,
-                precoBase, companhia, aviao);
+        super(codVoo, dest, horaP, porta,
+                preco, companhia, aviao);
     }
 
-    @Override
-    public double calcularCusto() {
-        return getPrecoBase()
-                * (1 + getCompanhia().getTaxaLucro() / 100);
-    }
 }

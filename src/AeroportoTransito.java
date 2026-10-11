@@ -1,11 +1,24 @@
 
 public class AeroportoTransito {
     private String nome;
-    private String cidade;
+    private String codigo;
+    private String localizacao;
 
-    public AeroportoTransito(String nome, String localizacao) {
+    public AeroportoTransito(String nome, String codigo, String localizacao) {
         this.nome = nome;
-        this.cidade = localizacao;
+        this.codigo = codigo;
+        this.localizacao = localizacao;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
 }

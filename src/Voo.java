@@ -1,52 +1,54 @@
 
 public abstract class Voo {
-    private String numeroVoo;
-    private String destino;
-    private String horaPartida;
-    private String portaEmbarque;
-    private double precoBase;
+    private String codVoo;
+    private String dest;
+    private String horaP;
+    private String porta;
+    private double preco;
     private Companhia companhia;
     private Aviao aviao;
 
-    public Voo(String numeroVoo, String destino, String horaPartida,
-               String portaEmbarque, double precoBase,
+    public Voo(String codVoo, String dest, String horaP,
+               String porta, double preco,
                Companhia companhia, Aviao aviao) {
-        this.numeroVoo = numeroVoo;
-        this.destino = destino;
-        this.horaPartida = horaPartida;
-        this.portaEmbarque = portaEmbarque;
-        this.precoBase = precoBase;
+        this.codVoo = codVoo;
+        this.dest = dest;
+        this.horaP = horaP;
+        this.porta = porta;
+        this.preco = preco;
         this.companhia = companhia;
         this.aviao = aviao;
     }
 
-    public String getNumeroVoo() {
-        return numeroVoo;
+    public String getCodVoo() {
+        return codVoo;
     }
 
-    public String getDestino() {
-        return destino;
+    public String getDest() {
+        return dest;
     }
 
-    public String getHoraPartida() {
-        return horaPartida;
+    public String getHoraP() {
+        return horaP;
     }
 
-    public String getPortaEmbarque() {
-        return portaEmbarque;
+    public String getPorta() {
+        return porta;
     }
 
-    public double getPrecoBase() {
-        return precoBase;
+    public double getPreco() {
+        return preco;
     }
 
     public Companhia getCompanhia() {
         return companhia;
     }
 
-    public Aviao getAeronave() {
+    public Aviao getAviao() {
         return aviao;
     }
 
-    public abstract double calcularCusto();
+    public double custoTotal() {
+        return preco + preco * companhia.getTaxaLucro();
+    }
 }
