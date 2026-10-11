@@ -5,26 +5,16 @@ import java.util.List;
 public class VooIndireto extends Voo {
     private double taxaTransito;
     private boolean permiteEmbarqueTransito;
-    private List<Escala> escalas;
 
     public VooIndireto(String numeroVoo, String destino,
                        String horaPartida, String portaEmbarque,
-                       double precoBase, CompanhiaAerea companhia,
-                       Aeronave aeronave, double taxaTransito,
+                       double precoBase, Companhia companhia,
+                       Aviao aviao, double taxaTransito,
                        boolean permiteEmbarqueTransito) {
         super(numeroVoo, destino, horaPartida, portaEmbarque,
-                precoBase, companhia, aeronave);
+                precoBase, companhia, aviao);
         this.taxaTransito = taxaTransito;
         this.permiteEmbarqueTransito = permiteEmbarqueTransito;
-        this.escalas = new ArrayList<>();
-    }
-
-    public void adicionarEscala(Escala escala) {
-        escalas.add(escala);
-    }
-
-    public List<Escala> getEscalas() {
-        return escalas;
     }
 
     public boolean permiteEmbarqueTransito() {

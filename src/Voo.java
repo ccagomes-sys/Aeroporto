@@ -5,19 +5,19 @@ public abstract class Voo {
     private String horaPartida;
     private String portaEmbarque;
     private double precoBase;
-    private CompanhiaAerea companhia;
-    private Aeronave aeronave;
+    private Companhia companhia;
+    private Aviao aviao;
 
     public Voo(String numeroVoo, String destino, String horaPartida,
                String portaEmbarque, double precoBase,
-               CompanhiaAerea companhia, Aeronave aeronave) {
+               Companhia companhia, Aviao aviao) {
         this.numeroVoo = numeroVoo;
         this.destino = destino;
         this.horaPartida = horaPartida;
         this.portaEmbarque = portaEmbarque;
         this.precoBase = precoBase;
         this.companhia = companhia;
-        this.aeronave = aeronave;
+        this.aviao = aviao;
     }
 
     public String getNumeroVoo() {
@@ -40,12 +40,12 @@ public abstract class Voo {
         return precoBase;
     }
 
-    public CompanhiaAerea getCompanhia() {
+    public Companhia getCompanhia() {
         return companhia;
     }
 
-    public Aeronave getAeronave() {
-        return aeronave;
+    public Aviao getAeronave() {
+        return aviao;
     }
 
     public abstract double calcularCusto();

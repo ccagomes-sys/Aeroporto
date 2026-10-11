@@ -1,9 +1,9 @@
 
-public class CompanhiaAerea {
+public class Companhia {
     private String nome;
     private double taxaLucro;
 
-    public CompanhiaAerea(String nome, double taxaLucro) {
+    public Companhia(String nome, double taxaLucro) {
         this.nome = nome;
         this.taxaLucro = taxaLucro;
     }

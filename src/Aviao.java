@@ -1,10 +1,10 @@
 
-public class Aeronave {
+public class Aviao {
     private String fabricante;
     private String modelo;
     private int capacidade;
 
-    public Aeronave(String fabricante, String modelo, int capacidade) {
+    public Aviao(String fabricante, String modelo, int capacidade) {
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.capacidade = capacidade;

@@ -3,10 +3,10 @@ public class VooDireto extends Voo {
 
     public VooDireto(String numeroVoo, String destino,
                      String horaPartida, String portaEmbarque,
-                     double precoBase, CompanhiaAerea companhia,
-                     Aeronave aeronave) {
+                     double precoBase, Companhia companhia,
+                     Aviao aviao) {
         super(numeroVoo, destino, horaPartida, portaEmbarque,
-                precoBase, companhia, aeronave);
+                precoBase, companhia, aviao);
     }
 
     @Override
