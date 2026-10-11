@@ -1,10 +1,6 @@
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class VooIndireto extends Voo {
-    private double taxaTransito;
-    private boolean permiteEmbarqueTransito;
+    private double taxaReabastecimento;
+    private boolean embarquePermitido;
 
     public VooIndireto(String numeroVoo, String destino,
                        String horaPartida, String portaEmbarque,
@@ -13,18 +9,18 @@ public class VooIndireto extends Voo {
                        boolean permiteEmbarqueTransito) {
         super(numeroVoo, destino, horaPartida, portaEmbarque,
                 precoBase, companhia, aviao);
-        this.taxaTransito = taxaTransito;
-        this.permiteEmbarqueTransito = permiteEmbarqueTransito;
+        this.taxaReabastecimento = taxaTransito;
+        this.embarquePermitido = permiteEmbarqueTransito;
     }
 
     public boolean permiteEmbarqueTransito() {
-        return permiteEmbarqueTransito;
+        return embarquePermitido;
     }
 
-    @Override
-    public double calcularCusto() {
+
+    public double custoTotal() {
         return getPrecoBase()
                 * (1 + getCompanhia().getTaxaLucro() / 100)
-                + taxaTransito;
+                + taxaReabastecimento;
     }
 }

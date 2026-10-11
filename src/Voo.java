@@ -48,5 +48,8 @@ public abstract class Voo {
         return aviao;
     }
 
-    public abstract double calcularCusto();
+    public double custoTotal() {
+        return getPrecoBase()
+                * (1 + getCompanhia().getTaxaLucro() / 100);
+    }
 }
